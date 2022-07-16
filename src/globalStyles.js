@@ -16,4 +16,9 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style-type: none;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

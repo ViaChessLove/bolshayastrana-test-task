@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentList from './components/commentList/CommentList';
+import { FormButton, FormInput } from './components/form/Form.style';
 import { GlobalStyle } from './globalStyles';
 
 
@@ -12,7 +13,10 @@ const App = () => {
     <>
       <GlobalStyle/>
       <form onSubmit={handleSubmit}>
-        <input type="text" />
+        <FormInput type="text" placeholder='Type here...'/>
+        <FormButton>
+          NEW COMMENT
+        </FormButton>
       </form>
       <CommentList/>
     </>
