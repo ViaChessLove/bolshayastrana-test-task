@@ -3,7 +3,7 @@ import SingleComment from '../comment/SingleComment';
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
-
+  console.log(comments.length);
   useEffect(() => {
     fetch('https://bigcountry-task.vercel.app/comments.json')
       .then((response) => response.json())

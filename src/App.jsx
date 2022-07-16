@@ -8,12 +8,14 @@ import { GlobalStyle } from './globalStyles';
 const App = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    e.target.reset();
   }
   return (
     <>
       <GlobalStyle/>
       <form onSubmit={handleSubmit}>
-        <FormInput type="text" placeholder='Type here...'/>
+        <FormInput id='body' type="text" placeholder='Type here...'/>
         <FormButton>
           NEW COMMENT
         </FormButton>
