@@ -1,0 +1,14 @@
+[x] fetch API
+[x] list comments UI
+[] pagination :
+  [] show max 20 comments
+  [] save in query parameters page number (key = page)
+  [] page parameter? on page : /
+  [] * without libs
+[] new comment:
+  [] form to add new post
+  [] validation:
+    [] more than 3 words
+    [] no more than 1000 symbols
+  [] add in start
+  [] current user
