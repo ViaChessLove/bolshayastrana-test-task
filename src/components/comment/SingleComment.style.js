@@ -20,12 +20,18 @@ export const CommentContent = styled.div`
   margin: 10px 20px;
   background-color: white;
 `
+export const CommentUserInfo = styled.div`
+  display: flex;
+  background: white;
+`
 
 export const CommentAvatar = styled.img`
   width:50px;
   height:50px;
   border-radius: 9999px;
-`;
+`
+
+
 
 export const CommentBody = styled.div`
   font-size: 16px;
