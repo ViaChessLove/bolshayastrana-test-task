@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
+    font-family: 'Sora', sans-serif;
     margin: 0;
     padding: 0;
     background: lightgray;

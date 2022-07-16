@@ -23,6 +23,12 @@ export const CommentContent = styled.div`
 export const CommentUserInfo = styled.div`
   display: flex;
   background: white;
+  margin-bottom: 10px;
+`
+
+export const CommentAvatarWrapper = styled.div`
+  margin-right:20px;
+  background: #fff
 `
 
 export const CommentAvatar = styled.img`
@@ -31,10 +37,24 @@ export const CommentAvatar = styled.img`
   border-radius: 9999px;
 `
 
+export const CommentAuthorNameJob = styled.div`
+  background: #fff
+`;
 
+export const CommentAuthorName = styled.h2`
+  font-size: 24px;
+  background: #fff;
+`
+
+export const CommentAuthorJob = styled.p`
+  font-size:18px;
+  background: #fff;
+  color:gray
+`
 
 export const CommentBody = styled.div`
   font-size: 16px;
+  margin-bottom: 10px;
   background: #fff;
 `
 
