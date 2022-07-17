@@ -44,12 +44,18 @@ export const CommentAuthorNameJob = styled.div`
 export const CommentAuthorName = styled.h2`
   font-size: 24px;
   background: #fff;
+  @media screen and (max-width: 450px){
+    font-size: 22px
+  }
 `
 
 export const CommentAuthorJob = styled.p`
   font-size:18px;
   background: #fff;
-  color:gray
+  color:gray;
+  @media screen and (max-width: 450px){
+    font-size: 16px
+  }
 `
 
 export const CommentBody = styled.div`
@@ -61,4 +67,8 @@ export const CommentBody = styled.div`
 export const CommentCreatedAt = styled.div`
   background: #fff; 
   color:lightgray;
+  font-size: 14px;
+  @media screen and (max-width: 450px){
+    font-size: 12px
+  }
 `

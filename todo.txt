@@ -6,9 +6,9 @@
   [] page parameter? on page : /
   [] * without libs
 [] new comment:
-  [] form to add new post
+  [x] form to add new post
   [] validation:
     [] more than 3 words
     [] no more than 1000 symbols
-  [] add in start
-  [] current user
+  [x] add in start
+  [x] current user
