@@ -5,10 +5,10 @@
   [] save in query parameters page number (key = page)
   [] page parameter? on page : /
   [] * without libs
-[] new comment:
+[x] new comment:
   [x] form to add new post
-  [] validation:
-    [] more than 3 words
-    [] no more than 1000 symbols
+  [x] validation:
+    [x] more than 3 words
+    [x] no more than 1000 symbols
   [x] add in start
   [x] current user

@@ -15,6 +15,8 @@ const isValid = (body) => {
 const App = () => {
   const [body, setBody] = useState('');
   const [invalid, setInvalid] = useState(false);
+  const {comments, setComments} = useContext(Comments);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isValid(body)){
@@ -36,14 +38,20 @@ const App = () => {
     }
   }
 
-  const {comments, setComments} = useContext(Comments);
-  
+  const handleBlur = (e) => {
+    if (!isValid(e.target.value)){
+      setInvalid(true);
+    } else {
+      setInvalid(false)
+    }
+  }
+
   return (
     <>
       <GlobalStyle/>
       <form onSubmit={handleSubmit}>
         {invalid? <FormInvalid>Your comment should contain at least three words and no more than 1000 symbols</FormInvalid>: undefined}
-        <FormInput  id='body' type="text" placeholder='Type here...' onChange={(e) => {setBody(e.target.value)}}/>
+        <FormInput onBlur={handleBlur}  id='body' type="text" placeholder='Type here...' onChange={(e) => {setBody(e.target.value)}}/>
         <FormButton>
           NEW COMMENT
         </FormButton>
