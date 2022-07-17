@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import CommentList from './components/commentList/CommentList';
 import { FormButton, FormInput, FormInvalid } from './components/form/Form.style';
+import Pagination from './components/pagination/Pagination';
 import { Comments } from './Context';
 import { user } from './data/user';
 import { GlobalStyle } from './globalStyles';
@@ -18,6 +19,7 @@ const App = () => {
   const [body, setBody] = useState('');
   const [invalid, setInvalid] = useState(false);
   const {comments, setComments} = useContext(Comments);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();

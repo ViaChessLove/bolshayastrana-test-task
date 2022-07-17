@@ -21,4 +21,9 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     align-items: center;
   }
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover{cursor: pointer}
+  }
 `;
