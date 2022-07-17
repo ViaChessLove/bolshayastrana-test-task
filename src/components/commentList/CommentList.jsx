@@ -21,7 +21,11 @@ const CommentList = () => {
   }, []);
 
   const paginate = pageNumber => setCurrentPage(pageNumber)
-
+  if (window.location.href.split('!#')[1] !== ''){
+    if (currentPage !== Number(window.location.href.split('!#')[1].split('=')[1]))
+      setCurrentPage(Number(window.location.href.split('!#')[1].split('=')[1]));
+    console.log(currentPage);
+  }
   return (
     <>
       <ul>
