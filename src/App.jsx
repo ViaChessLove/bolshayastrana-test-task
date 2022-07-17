@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import styled from 'styled-components';
 import CommentList from './components/commentList/CommentList';
 import { FormButton, FormInput, FormInvalid } from './components/form/Form.style';
 import { Comments } from './Context';
@@ -11,6 +12,7 @@ const isValid = (body) => {
   }
   return true;
 }
+
 
 const App = () => {
   const [body, setBody] = useState('');

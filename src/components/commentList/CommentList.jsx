@@ -10,7 +10,6 @@ const CommentList = () => {
       .then((response) => response.json())
       .then((actualData) => setComments(actualData))
       .catch((err) => console.log(err));
-    console.log('reload')
   }, []);
   return (
     <ul>
