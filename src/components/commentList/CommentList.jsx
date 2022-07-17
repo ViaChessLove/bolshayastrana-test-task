@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Comments } from '../../Context';
+import { Comments } from '../../CommentContext';
+import { Page } from '../../PageContext';
 import SingleComment from '../comment/SingleComment';
 import Pagination from './../pagination/Pagination';
 
@@ -8,9 +9,10 @@ const CommentList = () => {
   const {comments, setComments} = useContext(Comments);
   const [commentsPerPage] = useState(20);
   const [currentPage, setCurrentPage] = useState(1);
+  //const {currentPage, setCurrentPage} = useContext(Page);
   const lastCommentIndex = currentPage * commentsPerPage;
   const firstCommentIndex = lastCommentIndex - commentsPerPage;
-  const currentComment = comments.slice(firstCommentIndex, lastCommentIndex)
+  const currentComments = comments.slice(firstCommentIndex, lastCommentIndex);
   useEffect(() => {
     fetch('https://bigcountry-task.vercel.app/comments.json')
       .then((response) => response.json())
@@ -18,13 +20,15 @@ const CommentList = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const paginate = pageNumber => setCurrentPage(pageNumber)
+
   return (
     <>
       <ul>
-        <span>Total: {comments.length}</span>
-        {currentComment.map(comment => <SingleComment author={comment.author} createdAt={comment.created_at} body={comment.body} key={comment.id}/>)}
+        <h4>Total: {comments.length}</h4>
+        {currentComments.map(comment => <SingleComment author={comment.author} createdAt={comment.created_at} body={comment.body} key={comment.id}/>)}
       </ul>
-      <Pagination commentsPerPage={commentsPerPage} totalComments={comments.length}/>
+      <Pagination paginate={paginate} commentsPerPage={commentsPerPage} totalComments={comments.length}/>
     </>
     
   )

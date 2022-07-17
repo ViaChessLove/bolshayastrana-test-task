@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import CommentList from './components/commentList/CommentList';
 import { FormButton, FormInput, FormInvalid } from './components/form/Form.style';
 import Pagination from './components/pagination/Pagination';
-import { Comments } from './Context';
+import { Comments } from './CommentContext';
 import { user } from './data/user';
 import { GlobalStyle } from './globalStyles';
 

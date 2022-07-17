@@ -7,7 +7,7 @@ const initialState = {
 export const Comments = createContext(initialState);
 
 
-const Context = ({children}) => {
+const CommentContext = ({children}) => {
   const [comments, setComments] = useState(initialState.comments);
   return (
     <Comments.Provider value={{comments, setComments}} >
@@ -16,4 +16,4 @@ const Context = ({children}) => {
   )
 }
 
-export default Context
+export default CommentContext

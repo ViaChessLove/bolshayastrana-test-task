@@ -1,10 +1,10 @@
 [x] fetch API
 [x] list comments UI
 [] pagination :
-  [] show max 20 comments
+  [x] show max 20 comments
   [] save in query parameters page number (key = page)
   [] page parameter? on page : /
-  [] * without libs
+  [x] * without libs
 [x] new comment:
   [x] form to add new post
   [x] validation:
